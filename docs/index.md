@@ -14,17 +14,20 @@ Installation, the command-line reference and the code layout are in the
 
 ## Targets
 
-Four games, all on retail hardware, all over the same LDN and Pia layers:
+Four games, all on retail hardware, all over the same LDN and Pia layers, plus a fifth in
+bring-up:
 
-| | FRLG | LGPE | SwSh | BDSP |
-|---|:---:|:---:|:---:|:---:|
-| Trade | ✓ | ✓ | ✓ | ✓ |
-| Mystery Gift | ✓ | ∅ | ✓ | ∅ |
-| Link battle | ✓ | ✗ | ✗ | ✗ |
-| Code on the console, save read and write | ✓ | ✗ | ✗ | ✗ |
+| | FRLG | LGPE | SwSh | BDSP | PLA | Tomodachi |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| Trade | ✓ | ✓ | ✓ | ✓ | ✓ | △ |
+| Mystery Gift | ✓ | ∅ | ✓ | ∅ | ∅ | ∅ |
+| Link battle | ✓ | ✗ | ✗ | ✗ | ∅ | ∅ |
+| Code on the console, save read and write | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ |
 
-✓ works on a retail console · ✗ not done · ∅ the game has no such feature over local wireless
-FRLG FireRed/LeafGreen · LGPE Let's Go Pikachu/Eevee · SwSh Sword/Shield · BDSP Brilliant Diamond/Shining Pearl
+✓ works on a retail console · ✗ not done · ∅ the game has no such feature over local wireless ·
+△ bring-up: the link is wired and the storage format is done, but no session has been captured
+FRLG FireRed/LeafGreen · LGPE Let's Go Pikachu/Eevee · SwSh Sword/Shield · BDSP Brilliant
+Diamond/Shining Pearl · PLA Legends Arceus · Tomodachi Tomodachi Life: Living the Dream
 
 FireRed and LeafGreen run as the original GBA ROM inside an emulator on the Switch, so the ROM's
 own GBA link protocol is stacked on the console's LDN and Pia. The three other games put their
@@ -42,6 +45,7 @@ buffers over `gflnet3` in Sword and Shield and in Let's Go.
 | [Sword and Shield](swsh.md) | Pia 4, the sync framework, trading, and the Mystery Gift local branch. |
 | [Let's Go Pikachu and Eevee](lgpe.md) | Pia 3, the link code, and the trade flow. |
 | [Legends Arceus](pla.md) | Pia header version 11, the trade flow, and the record a host composes. |
+| [Tomodachi Life: Living the Dream](tomodachi.md) | The Mii exchange over local wireless, and the ShareMii-compatible `.ltd` collection. |
 | [Hardware and setup](hardware.md) | Adapters, Raspberry Pi deployment, Switch keys. |
 
 ## Credits

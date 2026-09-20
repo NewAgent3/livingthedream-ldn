@@ -2,7 +2,8 @@
 
 A Linux computer speaking Nintendo Switch local wireless (LDN) to Pokémon games on a real Switch or
 Switch 2. It hosts or joins the game's own wireless session and runs the game's protocol against a
-retail console, with nothing installed on the console. Five games so far:
+retail console, with nothing installed on the console. Five games so far, plus a Tomodachi Life
+module in bring-up:
 
 | | FRLG | LGPE | SwSh | BDSP | PLA |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -70,6 +71,16 @@ Legends Arceus
 - Any Pokémon the game has, composed from nothing: species, level, nature, ability, moves and their
   PP, mastered moves, alpha, shininess, nickname, individual and growth values, size, ball and met
   data, all from the game's own tables, and the stats the game itself would compute
+
+Tomodachi Life: Living the Dream (bring-up: no session captured yet)
+
+- A `.ltd` / `.ltd*` Mii and Palette House item library byte-compatible with ShareMii, filled from
+  the game's own local-wireless exchange on a retail console - the game has no online play and no
+  QR codes, so the exchange is the only way a Mii leaves an island
+- Collector-to-collector transfer of `.ltd` files between two machines on the session, no console
+  involved (the TOMO wire protocol: fragmentation, CRCs, acks, retransmission)
+- A scanning tool that reads the game's sessions off the air; the first capture fixes the game's
+  local communication id and Pia game key, the two constants the link still waits on
 
 Every game
 
